@@ -1,0 +1,28 @@
+﻿@model List<database_interaction.Models.Entity.Product>
+@{
+    ViewBag.Title = "Read";
+}
+
+<h2>Read</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+           
+            <td>@s.name</td>
+            <td>@s.price</td>
+            <td>@s.quantity</td>
+            <td>@s.description</td>
+        </tr>
+    }
+</table>
+
