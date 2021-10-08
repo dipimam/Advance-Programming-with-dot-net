@@ -1,0 +1,40 @@
+﻿@model List<database_interaction.Models.Entity.Product>
+@{
+    ViewBag.Title = "ShowCart";
+}
+
+<h2>Show Cart</h2>
+
+
+@if (Session["cart"] != null)
+{
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+<tr>
+    <td>@s.id</td>
+    <td>@s.name</td>
+    <td>@s.price</td>
+    <td>@s.quantity</td>
+    <td>@s.description</td>
+    <td><a href="/Product/DeleteOrder/@s.id" class="btn btn-primary">Delete Order</a></td>
+
+</tr>
+    }
+    <a href="/Product/ConfirmOrder" class="btn btn-primary">Confirm Order</a>
+
+</table>
+}
+else
+            {
+<h1>Your cart is Empty</h1> 
+            }

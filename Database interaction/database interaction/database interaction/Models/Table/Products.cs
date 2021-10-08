@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using database_interaction.Models.Entity;
 
+
 namespace database_interaction.Models.Table
 {
     public class Products
