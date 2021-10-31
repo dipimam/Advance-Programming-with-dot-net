@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f2fff9de2264b0c95d7b5ad21054ef5" Name="Diagram1">
+        <EntityTypeShape EntityType="tree_plantation_dbModel.admin" Width="1.5" PointX="1.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.assigned" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.assignment" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.authentication" Width="1.5" PointX="3.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.donation" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.donor" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.request" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tree_plantation_dbModel.volunteer" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_assignments_admins" ManuallyRouted="false" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_authentications_admins" ManuallyRouted="false" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_assigneds_assignments" ManuallyRouted="false" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_assigneds_volunteers" ManuallyRouted="false" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_donations_donors" ManuallyRouted="false" />
+        <AssociationConnector Association="tree_plantation_dbModel.FK_requests_volunteers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
