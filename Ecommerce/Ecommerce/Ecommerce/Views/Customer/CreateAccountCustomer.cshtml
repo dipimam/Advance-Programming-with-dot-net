@@ -1,0 +1,38 @@
+﻿@model Ecommerce.Models.Customer
+
+@{
+    ViewBag.Title = "CreateAccountCustomer";
+}
+
+<h2>CreateAccountCustomer</h2>
+
+
+<form action="/Customer/CreateAccountCustomer" method="post">
+    <div class="form-group">
+        <label for="c_name">Name:</label>
+        <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Enter Name">
+        <span class="text-danger">@Html.ValidationMessageFor(c => c.c_name)</span>
+        
+    </div>
+    <div class="form-group">
+        <label for="c_phone">Phone Number:</label>
+        <input type="number" class="form-control" id="c_phone" name="c_phone" placeholder="Enter Phone">
+        <span class="text-danger">@Html.ValidationMessageFor(c => c.c_phone)</span>
+    </div>
+    <div class="form-group">
+        <label for="c_email">Email:</label>
+        <input type="email" class="form-control" id="c_email" name="c_email" placeholder="Enter Email">
+        <span class="text-danger">@Html.ValidationMessageFor(c => c.c_email)</span>
+    </div>
+    <div class="form-group">
+        <label for="c_password">Password:</label>
+        <input type="password" class="form-control" id="c_password" name="c_password" placeholder="Enter Password">
+        <span class="text-danger">@Html.ValidationMessageFor(c => c.c_password)</span>
+    </div>
+    <div class="form-group">
+        <label for="c_address">Address:</label>
+        <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Enter Address">
+        <span class="text-danger">@Html.ValidationMessageFor(c => c.c_address)</span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

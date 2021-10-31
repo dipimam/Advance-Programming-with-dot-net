@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Ecommerce.Models.Product>
+
+@{
+    ViewBag.Title = "ViewProduct";
+}
+
+<h2>ViewProduct</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+
+            <td>@s.p_name</td>
+            <td>@s.p_price</td>
+            <td>@s.p_quantity</td>
+            <td>@s.p_description</td>
+            <td><a href="/Product/AddtoCart/@s.p_id" class="btn btn-primary">Add to Cart</a></td>
+
+        </tr>
+
+    }
+    <a href="/Product/ShowCart" class="btn btn-primary">Show Cart</a>
+    
+</table>
+

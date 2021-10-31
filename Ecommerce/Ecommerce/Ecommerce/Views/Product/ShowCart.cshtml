@@ -1,0 +1,39 @@
+﻿@model List<Ecommerce.Models.Product>
+
+@{
+    ViewBag.Title = "ShowCart";
+}
+
+
+
+@if (Session["cart"] != null)
+{
+
+    <table class="table table-bordered">
+        <tr>
+            
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var s in Model)
+        {
+    <tr>
+
+        <td>@s.p_name</td>
+        <td>@s.p_price</td>
+        <td>@s.p_description</td>
+        <td><a href="/Product/DeleteOrder/@s.p_id" class="btn btn-danger">Delete Order</a></td>
+
+
+    </tr>
+        }
+        <a href="/Product/ConfirmOrder" class="btn btn-primary">Confirm Order</a>
+
+    </table>
+}
+else
+{
+    <h1>Your cart is Empty</h1>
+}
